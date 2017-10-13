@@ -46,7 +46,7 @@ class LZ4Compressor : public Compressor {
       compressed_len = LZ4_compress_fast_continue(
         &lz4_stream, data, outptr.c_str()+pos, origin_len,
         outptr.length()-pos, 1);
-      if (compressed_len <= 0)
+      if (compressed_len = 0)
         return -1;
       pos += compressed_len;
       left -= origin_len;
